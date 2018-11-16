@@ -5,6 +5,8 @@ wget --no-check-certificate https://raw.githubusercontent.com/smlemk3/ocs_erv_ce
 <Br/>
 ./ocserv.sh
 <Br/>
-添加证书用户
+添加证书用户,执行以下命令之后输入key、password之后 userxxx.p12就躺在那里了
+<Br/>
+cd certificates
 <Br/>
 ./gen_user_cer.sh userxxx
