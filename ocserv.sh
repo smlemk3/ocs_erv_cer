@@ -142,6 +142,7 @@ tls_www_server' > server.tmpl
 	cp server-cert.pem /etc/ocserv/ssl/server-cert.pem
 	cp server-key.pem /etc/ocserv/ssl/server-key.pem
 	wget --no-check-certificate -O "gen_user_cer.sh" "https://raw.githubusercontent.com/smlemk3/ocs_erv_cer/master/gen_user_cer.sh"
+	chmod +x gen_user_cer.sh
 	#cd .. && rm -rf certificates/
 }
 Installation_dependency(){
