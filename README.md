@@ -10,3 +10,7 @@ wget --no-check-certificate https://raw.githubusercontent.com/smlemk3/ocs_erv_ce
 cd certificates
 <Br/>
 ./gen_user_cer.sh userxxx
+<Br/>
+如果断线重连并且出现 "a new connection attempt to the same or another gateway is needed" 类似错误, 打开 /etc/ocserv/ocserv.conf 在下面添加
+mtu = 1480
+然后重启服务即可
