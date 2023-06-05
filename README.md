@@ -1,5 +1,5 @@
 # ocs_erv_cer
-ocserv安装并配置证书,改自逗逼脚本,请在debian/ubuntu上服用(debian9测试通过)
+ocserv安装并配置证书,改自逗逼脚本,请在debian/ubuntu上服用(debian11测试通过)
 <Br/>
 wget --no-check-certificate https://raw.githubusercontent.com/smlemk3/ocs_erv_cer/master/ocserv.sh && chmod +x ocserv.sh
 <Br/>
