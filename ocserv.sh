@@ -104,8 +104,8 @@ rand(){
 Generate_SSL(){
 	lalala=$(rand)
 	mkdir certificates && cd certificates
-	echo -e 'cn = "'${lalala}'"
-organization = "'${lalala}'"
+	echo -e 'cn = "Cisco '${lalala}' CA"
+organization = "Cisco '${lalala}'"
 serial = 1
 expiration_days = 3650
 ca
@@ -124,8 +124,8 @@ crl_signing_key' > ca.tmpl
 		read -e -p "请手动输入你的服务器外网IP:" ip
 		[[ -z "${ip}" ]] && echo "取消..." && over
 	fi
-	echo -e 'cn = "'${ip}'"
-organization = "'${lalala}'"
+	echo -e 'cn = "Cisco '${lalala}' CA"
+organization = "Cisco '${lalala}'"
 expiration_days = 3650
 signing_key
 encryption_key
