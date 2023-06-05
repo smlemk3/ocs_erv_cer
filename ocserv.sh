@@ -5,17 +5,17 @@ export PATH
 #=================================================
 #	System Required: Debian/Ubuntu
 #	Description: ocserv AnyConnect
-#	Version: 1.0.5
+#	Version: 1.0.6
 #	Author: Toyo
 #	Blog: https://doub.io/vpnzy-7/
 #=================================================
-sh_ver="1.0.5"
+sh_ver="1.0.6"
 file="/usr/local/sbin/ocserv"
 conf_file="/etc/ocserv"
 conf="/etc/ocserv/ocserv.conf"
 passwd_file="/etc/ocserv/ocpasswd"
 log_file="/tmp/ocserv.log"
-ocserv_ver="1.1.0"
+ocserv_ver="1.1.7"
 PID_FILE="/var/run/ocserv.pid"
 
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
@@ -150,20 +150,6 @@ Installation_dependency(){
 	if [[ ${release} = "centos" ]]; then
 		echo -e "${Error} 本脚本不支持 CentOS 系统 !" && exit 1
 	elif [[ ${release} = "debian" ]]; then
-		cat /etc/issue |grep 9\..*>/dev/null
-		if [[ $? = 0 ]]; then
-			apt-get update
-			apt-get install vim net-tools pkg-config build-essential libgnutls28-dev libwrap0-dev liblz4-dev libseccomp-dev libreadline-dev libnl-nf-3-dev libev-dev gnutls-bin -y
-		else
-			mv /etc/apt/sources.list /etc/apt/sources.list.bak
-			wget --no-check-certificate -O "/etc/apt/sources.list" "https://raw.githubusercontent.com/smlemk3/ocs_erv_cer/master/us.sources.list"
-			apt-get update
-			apt-get install vim net-tools pkg-config build-essential libgnutls28-dev libwrap0-dev liblz4-dev libseccomp-dev libreadline-dev libnl-nf-3-dev libev-dev gnutls-bin -y
-			rm -rf /etc/apt/sources.list
-			mv /etc/apt/sources.list.bak /etc/apt/sources.list
-			apt-get update
-		fi
-	else
 		apt-get update
 		apt-get install vim net-tools pkg-config build-essential libgnutls28-dev libwrap0-dev liblz4-dev libseccomp-dev libreadline-dev libnl-nf-3-dev libev-dev gnutls-bin -y
 	fi
