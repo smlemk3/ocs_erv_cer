@@ -14,3 +14,6 @@ cd certificates
 如果断线重连并且出现 "a new connection attempt to the same or another gateway is needed" 类似错误, 打开 /etc/ocserv/ocserv.conf 在下面添加
 mtu = 1480
 然后重启服务即可
+
+cn-no-route
+https://github.com/CNMan/ocserv-cn-no-route
